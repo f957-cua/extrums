@@ -5,6 +5,7 @@ require("dotenv").config();
 const authRouter = require("./router/authRouter.js");
 const counterRouter = require("./router/counterRouter.js");
 const PORT = process.env.PORT || 3001;
+const { MONGO_URI } = process.env;
 
 const app = express();
 
@@ -38,9 +39,7 @@ app.use((err, req, res, next) => {
 
 const start = async () => {
   try {
-    await mongoose.connect(
-      "mongodb+srv://ivan:passw0rd@cluster0.citn4.mongodb.net/extrums"
-    );
+    await mongoose.connect(MONGO_URI);
     console.log("DB successfully connected");
     app.listen(PORT, () => {
       console.log(`server started on PORT ${PORT}`);
