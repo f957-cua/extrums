@@ -1,0 +1,32 @@
+.container_list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 400px;
+    max-height: 45vh;
+    border: 2px solid #b9b3b3;
+    border-radius: 4px;
+    margin-top: 20px;
+    overflow: scroll;
+}
+
+.counter_container {
+    margin: 10px 0;
+}
+
+.counter_container+button {
+    margin-bottom: 20px;
+}
+
+.container_item {
+    width: 95px;
+    border: 2px solid #575454;
+    border-radius: 4px;
+}
+
+.container_item>p {
+    height: 15px;
+    font-size: 12px;
+}
